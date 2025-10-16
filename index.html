@@ -1,10 +1,33 @@
-<h1>🍽️ Ecommerce Tienda Joyeria - MIPAIS</h1>
+h1>💍 Ecommerce Tienda Joyería - MIPAIS</h1>
+
+<div class="toolbar">
+  <label for="filtro">Categoría:</label>
+  <select id="filtro">
+    <option value="all">Todas</option>
+    <option value="Anillos">Anillos</option>
+    <option value="Collares">Collares</option>
+    <option value="Pulseras">Pulseras</option>
+    <option value="Cadenas">Cadenas</option>
+    <option value="Candongas">Candongas</option>
+  </select>
+  <button id="iaButton" class="btn">Asistente IA 💡</button>
+</div>
 
 <div id="productos"></div>
 
 <div class="carrito">
-  <h2>🧾 Carrito de Compras</h2>
+  <h2>🧾 Carrito de Compras (0)</h2>
   <ul id="lista-carrito"></ul>
   <p><strong>Total: $<span id="total">0.00</span></strong></p>
-  <button class="vaciar" onclick="vaciarCarrito()">🧼 Vaciar Carrito</button>
+  <button class="vaciar" onclick="vaciarCarrito()">🗑 Vaciar Carrito</button>
+
+  <div class="pay-section">
+    <p><strong>Método de pago:</strong></p>
+    <div id="paypal-button-container"></div>
+    <button id="pagarTarjeta" class="btn">💳 Pagar con Tarjeta (simulado)</button>
+    <div id="confirm" class="confirm"></div>
+  </div>
 </div>
+
+<!-- SDK PayPal -->
+<script src="https://www.paypal.com/sdk/js?client-id=sb&currency=USD"></script>
